@@ -1,38 +1,13 @@
 @extends('main.master')
-<!-- Section for adding css -->    
+<!-- Section for adding css -->
 @section('css')
 
 @endsection
 
-<!-- Section for adding content page -->    
+<!-- Section for adding content page -->
 @section('isi')
  <main>
     <!-- page-banner-area-start -->
-    <div class="page-banner-area page-banner-height-2" data-background="{{ asset('assets/img/banner/page-banner-4.jpg') }}">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="page-banner-content text-center">
-                        <h4 class="breadcrumb-title">Checkout</h4>
-                        <div class="breadcrumb-two">
-                            <nav>
-                               <nav class="breadcrumb-trail breadcrumbs">
-                                  <ul class="breadcrumb-menu">
-                                     <li class="breadcrumb-trail">
-                                        <a href="{{ url("/marketplace") }}"><span>Home</span></a>
-                                     </li>
-                                     <li class="trail-item">
-                                        <span>Checkout</span>
-                                     </li>
-                                  </ul>
-                               </nav> 
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- page-banner-area-end -->
 
     <!-- coupon-area-start -->
@@ -116,7 +91,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
-                                        <label>Nama Perusahaan</label>
+                                        <label>Note</label>
                                         <input type="text" placeholder="">
                                     </div>
                                 </div>
@@ -125,50 +100,6 @@
                                         <label>Alamat <span class="required">*</span></label>
                                         <input type="text" placeholder="Alamat Jalan">
                                     </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="checkout-form-list">
-                                        <label>Town / City <span class="required">*</span></label>
-                                        <input type="text" placeholder="Town / City">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-                                        <label> <span class="required">*</span></label>
-                                        <input type="text" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-                                        <label>Email Address <span class="required">*</span></label>
-                                        <input type="email" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-                                        <label>Phone <span class="required">*</span></label>
-                                        <input type="text" placeholder="Postcode / Zip">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="checkout-form-list create-acc">
-                                        <input id="cbox" type="checkbox">
-                                        <label>Create an account?</label>
-                                    </div>
-                                    <div id="cbox_info" class="checkout-form-list create-account">
-                                        <p>Create an account by entering the information below. If you are a returning
-                                            customer please login at the top of the page.</p>
-                                        <label>Account password <span class="required">*</span></label>
-                                        <input type="password" placeholder="password">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="different-address">
-                                <div class="ship-different-title">
-                                    <h3>
-                                        <label>Ship to a different address?</label>
-                                        <input id="ship-box" type="checkbox">
-                                    </h3>
                                 </div>
                                 <div id="ship-box-info">
                                     <div class="row">
@@ -233,12 +164,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="order-notes">
-                                    <div class="checkout-form-list">
-                                        <label>Order Notes</label>
-                                        <textarea id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -359,7 +285,7 @@
 
 @endsection
 
-<!-- Section for adding script js -->    
+<!-- Section for adding script js -->
 @section('script')
 
     @endsection

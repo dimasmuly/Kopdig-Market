@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Products;
 use Illuminate\Http\Request;
 
 class MarketController extends Controller
 {
     public function index()
     {
-        return view('pages.home');
+        $products = Products::all();
+        return view('pages.home', compact('products'));
     }
     public function shop()
     {

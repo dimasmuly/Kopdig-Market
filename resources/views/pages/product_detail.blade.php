@@ -1,10 +1,10 @@
 @extends('main.master')
-<!-- Section for adding css -->    
+<!-- Section for adding css -->
 @section('css')
 
 @endsection
 
-<!-- Section for adding content page -->    
+<!-- Section for adding content page -->
 @section('isi')
     <main>
         <!-- breadcrumb__area-start -->
@@ -33,21 +33,7 @@
                     <div class="col-xl-6">
                         <div class="product__details-nav d-sm-flex align-items-start">
                             <ul class="nav nav-tabs flex-sm-column justify-content-between" id="productThumbTab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                  <button class="nav-link active" id="thumbOne-tab" data-bs-toggle="tab" data-bs-target="#thumbOne" type="button" role="tab" aria-controls="thumbOne" aria-selected="true">
-                                      <img src="{{ asset('assets/img/product/nav/product-nav-1.jpg') }}" alt="">
-                                  </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                  <button class="nav-link" id="thumbTwo-tab" data-bs-toggle="tab" data-bs-target="#thumbTwo" type="button" role="tab" aria-controls="thumbTwo" aria-selected="false">
-                                    <img src="{{ asset('assets/img/product/nav/product-nav-2.jpg') }}" alt="">
-                                  </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                  <button class="nav-link" id="thumbThree-tab" data-bs-toggle="tab" data-bs-target="#thumbThree" type="button" role="tab" aria-controls="thumbThree" aria-selected="false">
-                                    <img src="{{ asset('assets/img/product/nav/product-nav-3.jpg') }}" alt="">
-                                  </button>
-                                </li>
+                                
                             </ul>
                             <div class="product__details-thumb">
                                 <div class="tab-content" id="productThumbContent">
@@ -132,7 +118,7 @@
                                     </span>
                                     <span class="tagged_as">
                                         <span class="title">Tags:</span>
-                                        <a href="#">Smartphone</a>, 
+                                        <a href="#">Smartphone</a>,
                                         <a href="#">Tablets</a>
                                     </span>
                                 </div>
@@ -366,12 +352,12 @@
         </div>
         <!-- product-details-des-end -->
 
-       
+
 
     </main>
     @endsection
 
-<!-- Section for adding script js -->    
+<!-- Section for adding script js -->
 @section('script')
 
     @endsection
