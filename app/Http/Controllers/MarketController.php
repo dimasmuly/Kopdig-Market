@@ -14,7 +14,8 @@ class MarketController extends Controller
     }
     public function shop()
     {
-        return view('pages.shop');
+        $products = Products::all();
+        return view('pages.shop', compact('products'));
     }
     public function detail_product()
     {

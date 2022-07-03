@@ -101,6 +101,26 @@
                                         <input type="text" placeholder="Alamat Jalan">
                                     </div>
                                 </div>
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <label>Pilih Kurir<span class="required"> *</span></label>
+                                        <select class="kurir" name="kolam" id="kolom">
+                                            <option selected="" disabled="">Jenis Kurir</option>
+                                                              <option value="1">
+                                              JNT                 </option>
+                                                                <option value="2">
+                                              SI CEPAT                 </option>
+                                                                <option value="3">
+                                              JNE                  </option>
+                                                                <option value="5">
+                                              POS                  </option>
+                                                            </select>
+                                    </div>
+                                </div>
+                                <div class="order-button-payment mt-20">
+                                    <button type="submit" class="tp-btn-h1">Submit</button>
+                                    </div>
+
                                 <div id="ship-box-info">
                                     <div class="row">
                                         <div class="col-md-6">

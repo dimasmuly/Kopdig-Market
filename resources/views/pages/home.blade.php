@@ -336,16 +336,6 @@
                         <div class="section__title">
                             <h5 class="st-titile">Produk Terlaris</h5>
                         </div>
-                        <div class="product__nav-tab">
-                            <ul class="nav nav-tabs" id="flast-sell-tab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                  <button class="nav-link active" id="computer-tab" data-bs-toggle="tab" data-bs-target="#computer" type="button" role="tab" aria-controls="computer" aria-selected="false">computer</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                  <button class="nav-link" id="samsung-tab" data-bs-toggle="tab" data-bs-target="#samsung" type="button" role="tab" aria-selected="false">samsung</button>
-                                </li>
-                              </ul>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -356,11 +346,12 @@
                             <div class="product-bs-slider-2">
                                 <div class="product-slider-2 swiper-container">
                                     <div class="swiper-wrapper">
+                                        @foreach ($products as $item)
                                         <div class="product__item swiper-slide">
                                             <div class="product__thumb fix">
                                                 <div class="product-image w-img">
                                                     <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                                        <img src="{{ asset('assets/img/product/ipad.png') }}" alt="product">
+                                                        <img src="{{$item->thumbnail }}" alt="product">
                                                     </a>
                                                 </div>
                                                 <div class="product__offer">
@@ -382,7 +373,7 @@
                                                 </div>
                                             </div>
                                             <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
+                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">{{$item->name}}</a></h6>
                                                 <div class="rating mb-5">
                                                     <ul>
                                                         <li><a href="#"><i class="fal fa-star"></i></a></li>
@@ -394,7 +385,7 @@
                                                     <span>(01 review)</span>
                                                 </div>
                                                 <div class="price">
-                                                    <span>Rp. 12.000.000 - Rp. 13.000.000</span>
+                                                    <span>{{$item->price}}</span>
                                                 </div>
                                             </div>
                                             <div class="product__add-cart text-center">
@@ -403,519 +394,10 @@
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="product__item swiper-slide">
-                                            <div class="product__thumb fix">
-                                                <div class="product-image w-img">
-                                                    <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                                        <img src="{{ asset('assets/img/product/jersey.png') }}" alt="product">
-                                                    </a>
-                                                </div>
-                                                <div class="product-action">
-                                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                        <i class="fal fa-eye"></i>
-                                                        <i class="fal fa-eye"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-heart"></i>
-                                                        <i class="fal fa-heart"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-layer-group"></i>
-                                                        <i class="fal fa-layer-group"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Men Size Yellow Basketball Jerseys</a></h6>
-                                                <div class="rating mb-5">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                    </ul>
-                                                    <span>(01 review)</span>
-                                                </div>
-                                                <div class="price">
-                                                    <span>Rp. 99.000 - Rp. 120.000</span>
-                                                </div>
-                                            </div>
-                                            <div class="product__add-cart text-center">
-                                                <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                                Masukkan Keranjang
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="product__item swiper-slide">
-                                            <div class="product__thumb fix">
-                                                <div class="product-image w-img">
-                                                    <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                                        <img src="{{ asset('assets/img/product/xbox.png') }}" alt="product">
-                                                    </a>
-                                                </div>
-                                                <div class="product__offer">
-                                                <span class="discount">-9%</span>
-                                                </div>
-                                                <div class="product-action">
-                                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                        <i class="fal fa-eye"></i>
-                                                        <i class="fal fa-eye"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-heart"></i>
-                                                        <i class="fal fa-heart"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-layer-group"></i>
-                                                        <i class="fal fa-layer-group"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Xbox Wireless Game Controller Pink</a></h6>
-                                                <div class="rating mb-5">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                    </ul>
-                                                    <span>(01 review)</span>
-                                                </div>
-                                                <div class="price">
-                                                    <span>Rp. 120.000 - Rp. 500.000</span>
-                                                </div>
-                                            </div>
-                                            <div class="product__add-cart text-center">
-                                                <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                                Masukkan Keranjang
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="product__item swiper-slide">
-                                            <div class="product__thumb fix">
-                                                <div class="product-image w-img">
-                                                    <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                                        <img src="{{ asset('assets/img/product/headset1.png') }}" alt="product">
-                                                    </a>
-                                                </div>
-                                                <div class="product-action">
-                                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                        <i class="fal fa-eye"></i>
-                                                        <i class="fal fa-eye"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-heart"></i>
-                                                        <i class="fal fa-heart"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-layer-group"></i>
-                                                        <i class="fal fa-layer-group"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Wireless Bluetooth Over-Ear Headphones</a></h6>
-                                                <div class="rating mb-5">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                    </ul>
-                                                    <span>(01 review)</span>
-                                                </div>
-                                                <div class="price">
-                                                    <span>Rp. 700.000 - Rp. 3.000.000</span>
-                                                </div>
-                                            </div>
-                                            <div class="product__add-cart text-center">
-                                                <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                                Masukkan Keranjang
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="product__item swiper-slide">
-                                            <div class="product__thumb fix">
-                                                <div class="product-image w-img">
-                                                    <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                                        <img src="{{ asset('assets/img/product/headset.png') }}" alt="product">
-                                                    </a>
-                                                </div>
-                                                <div class="product__offer">
-                                                <span class="discount">-10%</span>
-                                                </div>
-                                                <div class="product-action">
-                                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                        <i class="fal fa-eye"></i>
-                                                        <i class="fal fa-eye"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-heart"></i>
-                                                        <i class="fal fa-heart"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-layer-group"></i>
-                                                        <i class="fal fa-layer-group"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Solo3 Wireless On-Ear Headphones</a></h6>
-                                                <div class="rating mb-5">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                    </ul>
-                                                    <span>(01 review)</span>
-                                                </div>
-                                                <div class="price">
-                                                    <span><del>Rp. 5.000.000</del> Rp. 6.000.000</span>
-                                                </div>
-                                            </div>
-                                            <div class="product__add-cart text-center">
-                                                <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                                Masukkan Keranjang
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="product__item swiper-slide">
-                                            <div class="product__thumb fix">
-                                                <div class="product-image w-img">
-                                                    <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                                        <img src="{{ asset('assets/img/product/speaker.png') }}" alt="product">
-                                                    </a>
-                                                </div>
-                                                <div class="product-action">
-                                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                        <i class="fal fa-eye"></i>
-                                                        <i class="fal fa-eye"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-heart"></i>
-                                                        <i class="fal fa-heart"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-layer-group"></i>
-                                                        <i class="fal fa-layer-group"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Vifa Bluetooth Portable Wireless Speaker</a></h6>
-                                                <div class="rating mb-5">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                    </ul>
-                                                    <span>(01 review)</span>
-                                                </div>
-                                                <div class="price">
-                                                    <span>Rp. 4.000.000 - Rp. 12.000.000</span>
-                                                </div>
-                                            </div>
-                                            <div class="product__add-cart text-center">
-                                                <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                                Masukkan Keranjang
-                                                </button>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <!-- If we need navigation buttons -->
-                                <div class="bs-button bs2-button-prev"><i class="fal fa-chevron-left"></i></div>
-                                <div class="bs-button bs2-button-next"><i class="fal fa-chevron-right"></i></div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="samsung" role="tabpanel" aria-labelledby="samsung-tab">
-                            <div class="product-bs-slider-2">
-                                <div class="product-slider-2 swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="product__item swiper-slide">
-                                            <div class="product__thumb fix">
-                                                <div class="product-image w-img">
-                                                    <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                                        <img src="{{ asset('assets/img/product/ipad.png') }}" alt="product">
-                                                    </a>
-                                                </div>
-                                                <div class="product__offer">
-                                                <span class="discount">-15%</span>
-                                                </div>
-                                                <div class="product-action">
-                                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                        <i class="fal fa-eye"></i>
-                                                        <i class="fal fa-eye"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-heart"></i>
-                                                        <i class="fal fa-heart"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-layer-group"></i>
-                                                        <i class="fal fa-layer-group"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
-                                                <div class="rating mb-5">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                    </ul>
-                                                    <span>(01 review)</span>
-                                                </div>
-                                                <div class="price">
-                                                    <span>Rp. 12.000.000 - Rp. 13.000.000</span>
-                                                </div>
-                                            </div>
-                                            <div class="product__add-cart text-center">
-                                                <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                                Masukkan Keranjang
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="product__item swiper-slide">
-                                            <div class="product__thumb fix">
-                                                <div class="product-image w-img">
-                                                    <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                                        <img src="{{ asset('assets/img/product/headset1.png') }}" alt="product">
-                                                    </a>
-                                                </div>
-                                                <div class="product-action">
-                                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                        <i class="fal fa-eye"></i>
-                                                        <i class="fal fa-eye"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-heart"></i>
-                                                        <i class="fal fa-heart"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-layer-group"></i>
-                                                        <i class="fal fa-layer-group"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Wireless Bluetooth Over-Ear Headphones</a></h6>
-                                                <div class="rating mb-5">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                    </ul>
-                                                    <span>(01 review)</span>
-                                                </div>
-                                                <div class="price">
-                                                    <span>Rp. 700.000 - Rp. 3.000.000</span>
-                                                </div>
-                                            </div>
-                                            <div class="product__add-cart text-center">
-                                                <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                                Masukkan Keranjang
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="product__item swiper-slide">
-                                            <div class="product__thumb fix">
-                                                <div class="product-image w-img">
-                                                    <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                                        <img src="{{ asset('assets/img/product/headset.png') }}" alt="product">
-                                                    </a>
-                                                </div>
-                                                <div class="product__offer">
-                                                <span class="discount">-10%</span>
-                                                </div>
-                                                <div class="product-action">
-                                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                        <i class="fal fa-eye"></i>
-                                                        <i class="fal fa-eye"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-heart"></i>
-                                                        <i class="fal fa-heart"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-layer-group"></i>
-                                                        <i class="fal fa-layer-group"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Solo3 Wireless On-Ear Headphones</a></h6>
-                                                <div class="rating mb-5">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                    </ul>
-                                                    <span>(01 review)</span>
-                                                </div>
-                                                <div class="price">
-                                                    <span><del>Rp. 5.000.000</del> Rp. 6.000.000</span>
-                                                </div>
-                                            </div>
-                                            <div class="product__add-cart text-center">
-                                                <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                                Masukkan Keranjang
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="product__item swiper-slide">
-                                            <div class="product__thumb fix">
-                                                <div class="product-image w-img">
-                                                    <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                                        <img src="{{ asset('assets/img/product/speaker.png') }}" alt="product">
-                                                    </a>
-                                                </div>
-                                                <div class="product-action">
-                                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                        <i class="fal fa-eye"></i>
-                                                        <i class="fal fa-eye"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-heart"></i>
-                                                        <i class="fal fa-heart"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-layer-group"></i>
-                                                        <i class="fal fa-layer-group"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Vifa Bluetooth Portable Wireless Speaker</a></h6>
-                                                <div class="rating mb-5">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                    </ul>
-                                                    <span>(01 review)</span>
-                                                </div>
-                                                <div class="price">
-                                                    <span>Rp. 4.000.000 - Rp. 12.000.000</span>
-                                                </div>
-                                            </div>
-                                            <div class="product__add-cart text-center">
-                                                <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                                Masukkan Keranjang
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="product__item swiper-slide">
-                                            <div class="product__thumb fix">
-                                                <div class="product-image w-img">
-                                                    <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                                        <img src="{{ asset('assets/img/product/jersey.png') }}" alt="product">
-                                                    </a>
-                                                </div>
-                                                <div class="product-action">
-                                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                        <i class="fal fa-eye"></i>
-                                                        <i class="fal fa-eye"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-heart"></i>
-                                                        <i class="fal fa-heart"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-layer-group"></i>
-                                                        <i class="fal fa-layer-group"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Men Size Yellow Basketball Jerseys</a></h6>
-                                                <div class="rating mb-5">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                    </ul>
-                                                    <span>(01 review)</span>
-                                                </div>
-                                                <div class="price">
-                                                    <span>Rp. 99.000 - Rp. 120.000</span>
-                                                </div>
-                                            </div>
-                                            <div class="product__add-cart text-center">
-                                                <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                                Masukkan Keranjang
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="product__item swiper-slide">
-                                            <div class="product__thumb fix">
-                                                <div class="product-image w-img">
-                                                    <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                                        <img src="{{ asset('assets/img/product/xbox.png') }}" alt="product">
-                                                    </a>
-                                                </div>
-                                                <div class="product__offer">
-                                                <span class="discount">-9%</span>
-                                                </div>
-                                                <div class="product-action">
-                                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                        <i class="fal fa-eye"></i>
-                                                        <i class="fal fa-eye"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-heart"></i>
-                                                        <i class="fal fa-heart"></i>
-                                                    </a>
-                                                    <a href="#" class="icon-box icon-box-1">
-                                                        <i class="fal fa-layer-group"></i>
-                                                        <i class="fal fa-layer-group"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Xbox Wireless Game Controller Pink</a></h6>
-                                                <div class="rating mb-5">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                    </ul>
-                                                    <span>(01 review)</span>
-                                                </div>
-                                                <div class="price">
-                                                    <span>Rp. 120.000 - Rp. 500.000</span>
-                                                </div>
-                                            </div>
-                                            <div class="product__add-cart text-center">
-                                                <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                                Masukkan Keranjang
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- If we need navigation buttons -->
-                                </div>
                                 <div class="bs-button bs2-button-prev"><i class="fal fa-chevron-left"></i></div>
                                 <div class="bs-button bs2-button-next"><i class="fal fa-chevron-right"></i></div>
                             </div>
@@ -1246,11 +728,12 @@
                 <div class="product-bs-slider-2">
                     <div class="product-slider-3 swiper-container">
                         <div class="swiper-wrapper">
+                            @foreach ($products as $item)
                             <div class="product__item mb-20 swiper-slide">
                                 <div class="product__thumb fix">
                                     <div class="product-image w-img">
-                                        <a href="product-details.html">
-                                            <img src="{{ asset('assets/img/product/ipad.png') }}" alt="product">
+                                        <a href="{{ url("/marketplace/shop/product-detail") }}">
+                                            <img src="{{$item->thumbnail }}" alt="product">
                                         </a>
                                     </div>
                                     <div class="product__offer">
@@ -1272,7 +755,7 @@
                                     </div>
                                 </div>
                                 <div class="product__content">
-                                    <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
+                                    <h6><a href="{{ url("/marketplace/shop/product-detail") }}">{{$item->name}}</a></h6>
                                     <div class="rating mb-5">
                                         <ul>
                                             <li><a href="#"><i class="fal fa-star"></i></a></li>
@@ -1284,7 +767,7 @@
                                         <span>(01 review)</span>
                                     </div>
                                     <div class="price">
-                                        <span>Rp. 12.000.000 - Rp. 13.000.000</span>
+                                        <span>{{$item->price}}</span>
                                     </div>
                                 </div>
                                 <div class="product__add-cart text-center">
@@ -1293,229 +776,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="product__item mb-20 swiper-slide">
-                                <div class="product__thumb fix">
-                                    <div class="product-image w-img">
-                                        <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                            <img src="{{ asset('assets/img/product/jersey.png') }}" alt="product">
-                                        </a>
-                                    </div>
-                                    <div class="product-action">
-                                        <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                            <i class="fal fa-eye"></i>
-                                            <i class="fal fa-eye"></i>
-                                        </a>
-                                        <a href="#" class="icon-box icon-box-1">
-                                            <i class="fal fa-heart"></i>
-                                            <i class="fal fa-heart"></i>
-                                        </a>
-                                        <a href="#" class="icon-box icon-box-1">
-                                            <i class="fal fa-layer-group"></i>
-                                            <i class="fal fa-layer-group"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product__content">
-                                    <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Men Size Yellow Basketball Jerseys</a></h6>
-                                    <div class="rating mb-5">
-                                        <ul>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                        </ul>
-                                        <span>(01 review)</span>
-                                    </div>
-                                    <div class="price">
-                                        <span>Rp. 99.000 - Rp. 120.000</span>
-                                    </div>
-                                </div>
-                                <div class="product__add-cart text-center">
-                                    <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                    Masukkan Keranjang
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product__item mb-20 swiper-slide">
-                                <div class="product__thumb fix">
-                                    <div class="product-image w-img">
-                                        <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                            <img src="{{ asset('assets/img/product/xbox.png') }}" alt="product">
-                                        </a>
-                                    </div>
-                                    <div class="product__offer">
-                                    <span class="discount">-9%</span>
-                                    </div>
-                                    <div class="product-action">
-                                        <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                            <i class="fal fa-eye"></i>
-                                            <i class="fal fa-eye"></i>
-                                        </a>
-                                        <a href="#" class="icon-box icon-box-1">
-                                            <i class="fal fa-heart"></i>
-                                            <i class="fal fa-heart"></i>
-                                        </a>
-                                        <a href="#" class="icon-box icon-box-1">
-                                            <i class="fal fa-layer-group"></i>
-                                            <i class="fal fa-layer-group"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product__content">
-                                    <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Xbox Wireless Game Controller Pink</a></h6>
-                                    <div class="rating mb-5">
-                                        <ul>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                        </ul>
-                                        <span>(01 review)</span>
-                                    </div>
-                                    <div class="price">
-                                        <span>Rp. 120.000 - Rp. 500.000</span>
-                                    </div>
-                                </div>
-                                <div class="product__add-cart text-center">
-                                    <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                    Masukkan Keranjang
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product__item mb-20 swiper-slide">
-                                <div class="product__thumb fix">
-                                    <div class="product-image w-img">
-                                        <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                            <img src="{{ asset('assets/img/product/appo-r11s.jpg') }}" alt="product">
-                                        </a>
-                                    </div>
-                                    <div class="product-action">
-                                        <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                            <i class="fal fa-eye"></i>
-                                            <i class="fal fa-eye"></i>
-                                        </a>
-                                        <a href="#" class="icon-box icon-box-1">
-                                            <i class="fal fa-heart"></i>
-                                            <i class="fal fa-heart"></i>
-                                        </a>
-                                        <a href="#" class="icon-box icon-box-1">
-                                            <i class="fal fa-layer-group"></i>
-                                            <i class="fal fa-layer-group"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product__content">
-                                    <h6><a href="{{ url("/marketplace/shop/product-detail") }}">APPO R11s 64GB Dual 20MP Cameras</a></h6>
-                                    <div class="rating mb-5">
-                                        <ul>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                        </ul>
-                                        <span>(01 review)</span>
-                                    </div>
-                                    <div class="price">
-                                        <span>Rp 5.000.000 - Rp 5.500.000</span>
-                                    </div>
-                                </div>
-                                <div class="product__add-cart text-center">
-                                    <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                    Masukkan Keranjang
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product__item mb-20 swiper-slide">
-                                <div class="product__thumb fix">
-                                    <div class="product-image w-img">
-                                        <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                            <img src="{{ asset('assets/img/product/headset-g951.png') }}" alt="product">
-                                        </a>
-                                    </div>
-                                    <div class="product-action">
-                                        <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                            <i class="fal fa-eye"></i>
-                                            <i class="fal fa-eye"></i>
-                                        </a>
-                                        <a href="#" class="icon-box icon-box-1">
-                                            <i class="fal fa-heart"></i>
-                                            <i class="fal fa-heart"></i>
-                                        </a>
-                                        <a href="#" class="icon-box icon-box-1">
-                                            <i class="fal fa-layer-group"></i>
-                                            <i class="fal fa-layer-group"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product__content">
-                                    <h6><a href="{{ url("/marketplace/shop/product-detail") }}">G951s Pink Stereo Gaming Headset</a></h6>
-                                    <div class="rating mb-5">
-                                        <ul>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                        </ul>
-                                        <span>(01 review)</span>
-                                    </div>
-                                    <div class="price">
-                                        <span>Rp. 2.000.000 - Rp. 2.500.000</span>
-                                    </div>
-                                </div>
-                                <div class="product__add-cart text-center">
-                                    <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                    Masukkan Keranjang
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product__item mb-20 swiper-slide">
-                                <div class="product__thumb fix">
-                                    <div class="product-image w-img">
-                                        <a href="{{ url("/marketplace/shop/product-detail") }}">
-                                            <img src="{{ asset('assets/img/product/ipad.png') }}" alt="product">
-                                        </a>
-                                    </div>
-                                    <div class="product-action">
-                                        <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                            <i class="fal fa-eye"></i>
-                                            <i class="fal fa-eye"></i>
-                                        </a>
-                                        <a href="#" class="icon-box icon-box-1">
-                                            <i class="fal fa-heart"></i>
-                                            <i class="fal fa-heart"></i>
-                                        </a>
-                                        <a href="#" class="icon-box icon-box-1">
-                                            <i class="fal fa-layer-group"></i>
-                                            <i class="fal fa-layer-group"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product__content">
-                                    <h6><a href="{{ url("/marketplace/shop/product-detail") }}">Epple iPhone 11 Pro Max 64GB Gold</a></h6>
-                                    <div class="rating mb-5">
-                                        <ul>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                        </ul>
-                                        <span>(01 review)</span>
-                                    </div>
-                                    <div class="price">
-                                        <span>Rp. 12.000.000 - Rp. 13.000.000</span>
-                                    </div>
-                                </div>
-                                <div class="product__add-cart text-center">
-                                    <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                    Masukkan Keranjang
-                                    </button>
-                                </div>
-                            </div>
+                          @endforeach
                         </div>
                     </div>
                 </div>
