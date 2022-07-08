@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-xl-6">
                         <div class="product__details-content">
-                            <h6>Samsung Galaxy A12, 32GB, Black – (Locked)</h6>
+                            <h6> {{$produtcs->name}}</h6>
                             <div class="pd-rating mb-10">
                                 <ul class="rating">
                                     <li><a href="#"><i class="fal fa-star"></i></a></li>
@@ -71,7 +71,7 @@
                                 <span><a href="#">Add your review</a></span>
                             </div>
                             <div class="price mb-10">
-                                <span>$216.00</span>
+                                <span>php{{item->price}}</span>
                             </div>
                             <div class="features-des mb-20 mt-10">
                                 <ul>

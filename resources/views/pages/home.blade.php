@@ -232,7 +232,7 @@
                                 <div class="product__item swiper-slide">
                                     <div class="product__thumb fix">
                                         <div class="product-image w-img">
-                                            <a href="{{ url("/marketplace/shop/product-detail") }}">
+                                            <a href="/marketplace/shop/product-detail/{{$item->id}}">
                                                 <img src="{{$item->thumbnail }}" alt="product">
                                             </a>
                                         </div>
@@ -301,7 +301,7 @@
                 <div class="col-xl-6 col-lg-6 col-md-12">
                     <div class="banner__item p-relative w-img mb-30">
                         <div class="banner__img">
-                            <a href="{{ url("/marketplace/shop/product-detail") }}"><img src="{{ asset('assets/img/banner/pc-keyboard.png') }}" alt=""></a>
+                            <a href="/marketplace/shop/product-detail/{{$item->id}}"><img src="{{ asset('assets/img/banner/pc-keyboard.png') }}" alt=""></a>
                         </div>
                         <div class="banner__content">
                             <span>Produk Terbaik</span>
@@ -350,7 +350,7 @@
                                         <div class="product__item swiper-slide">
                                             <div class="product__thumb fix">
                                                 <div class="product-image w-img">
-                                                    <a href="{{ url("/marketplace/shop/product-detail") }}">
+                                                    <a href="/marketplace/shop/product-detail/{{$item->id}}">
                                                         <img src="{{$item->thumbnail }}" alt="product">
                                                     </a>
                                                 </div>
@@ -373,7 +373,7 @@
                                                 </div>
                                             </div>
                                             <div class="product__content">
-                                                <h6><a href="{{ url("/marketplace/shop/product-detail") }}">{{$item->name}}</a></h6>
+                                                <h6><a href="/marketplace/shop/product-detail/{{$item->id}}">{{$item->name}}</a></h6>
                                                 <div class="rating mb-5">
                                                     <ul>
                                                         <li><a href="#"><i class="fal fa-star"></i></a></li>
