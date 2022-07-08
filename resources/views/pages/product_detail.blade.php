@@ -33,13 +33,13 @@
                     <div class="col-xl-6">
                         <div class="product__details-nav d-sm-flex align-items-start">
                             <ul class="nav nav-tabs flex-sm-column justify-content-between" id="productThumbTab" role="tablist">
-                                
+
                             </ul>
                             <div class="product__details-thumb">
                                 <div class="tab-content" id="productThumbContent">
                                     <div class="tab-pane fade show active" id="thumbOne" role="tabpanel" aria-labelledby="thumbOne-tab">
                                         <div class="product__details-nav-thumb w-img">
-                                            <img src="{{ asset('assets/img/product/nav/product-nav-big-1.jpg') }}" alt="">
+                                            <img src="{{$product->thumbnail}}" alt="">
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="thumbTwo" role="tabpanel" aria-labelledby="thumbTwo-tab">
@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-xl-6">
                         <div class="product__details-content">
-                            <h6> {{$produtcs->name}}</h6>
+                            <h6> {{$product->name}}</h6>
                             <div class="pd-rating mb-10">
                                 <ul class="rating">
                                     <li><a href="#"><i class="fal fa-star"></i></a></li>
@@ -71,7 +71,7 @@
                                 <span><a href="#">Add your review</a></span>
                             </div>
                             <div class="price mb-10">
-                                <span>php{{item->price}}</span>
+                                <span>{{$product->price}}</span>
                             </div>
                             <div class="features-des mb-20 mt-10">
                                 <ul>
@@ -153,55 +153,7 @@
                 <div class="tab-content" id="prodductDesTaContent">
                     <div class="tab-pane fade active show" id="des" role="tabpanel" aria-labelledby="des-tab">
                         <div class="product__details-des-wrapper">
-                            <p class="des-text mb-35">Designed by Hans J. Wegner in 1949 as one of the first models created especially for Carl Hansen & Son, and produced since 1950. The last of a series of chairs wegner designed based on inspiration from antique Chinese armchairs. The gently rounded top together with the back and seat offers a variety of comfortable seating positions,ideal for both long visits to the dining table and relaxed lounging.</p>
-                            <h6 class="des-sm-title">The standard passage, used since the 1500s.</h6>
-                            <p class="des-text mb-35">A light chair, easy to move around the dining table and about the room. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <div class="features-des-image text-center">
-                                <img src="{{ asset('assets/img/features-product/product-content-1.jpg') }}" alt="">
-                            </div>
-                            <div class="product-des-section mb-90">
-                                <h5 class="des-section mb-30">Get 30% Daily Cash
-                                  <br>  Back with Membership Card.</h5>
-                                  <p>A new collection of lounge furniture, occasional tables and a stool by Edward Barber & Jay Osgerby offers a relaxed, contemporary attitude toward interior design. The lounge furniture includes four individualized sized sofas, and three complementary ottomans. Available in a range of upholstery fabrics and leathers, the lounge furniture is distinguished by stitched seams that reinforce its architectural profile, softened by the curvature of cushions on each face range of upholstery fabrics and leathers.</p>
-                            </div>
-                            <div class="row mb-80">
-                                <div class="col-xl-6">
-                                    <div class="des-single mb-30 text-center">
-                                        <div class="features-des-image text-center">
-                                            <img src="{{ asset('assets/img/features-product/product-content-2.jpg') }}" alt="">
-                                        </div>
-                                        <h5 class="des-section">Get 30% Daily Cash
-                                            <br>  Back with Membership Card.</h5>
-                                        <p>Sit amet conse ctetur adipisicing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore  magna aliqua.</p>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="des-single text-center mb-30">
-                                        <div class="features-des-image">
-                                            <img src="{{ asset('assets/img/features-product/product-content-3.jpg') }}" alt="">
-                                        </div>
-                                        <h5 class="des-section text-center">Get 70% Daily Cash
-                                            <br>  Back with Membership Card.</h5>
-                                        <p>Sit amet conse ctetur adipisicing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore  magna aliqua.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="features-des-image features-des-image-2 text-center mb-50 w-img">
-                                <img src="{{ asset('assets/img/features-product/product-content-4.jpg') }}" alt="">
-                            </div>
-                            <div class="des-sm-features">
-                                <div class="des-sm-fet text-center mb-30">
-                                    <img src="{{ asset('assets/img/features-product/product-content-5.jpg') }}" alt="">
-                                    <span>Ultra Wide Angle</span>
-                                </div>
-                                <div class="des-sm-fet text-center mb-30">
-                                    <img src="{{ asset('assets/img/features-product/product-content-6.jpg') }}" alt="">
-                                    <span>Live Focus On</span>
-                                </div>
-                            </div>
-                            <p class="des-text mb-35">Designed by Puik in 1949 as one of the first models created especially for Carl Hansen & Son, and produced since 1950. The last of a series of chairs wegner designed based on inspiration from antique Chinese armchairs. The gently rounded top together with the back and seat offers a variety of comfortable seating positions,ideal for both long visits to the dining table and relaxed lounging. A light chair easy to move around the dining table and about the room. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
-                            <h6 class="des-sm-title">Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC.</h6>
-                            <p class="des-text mb-25">Sound of Marshall, unplugs the chords, and takes the show on the road. Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.</p>
+                            {{$product->description}}
                         </div>
                     </div>
                     <div class="tab-pane fade" id="aditional" role="tabpanel" aria-labelledby="aditional-tab">

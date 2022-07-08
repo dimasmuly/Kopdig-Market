@@ -17,9 +17,9 @@ class MarketController extends Controller
         $products = Product::all();
         return view('pages.shop', compact('products'));
     }
-    public function detail_product()
+    public function detail_product(Product $product)
     {
-        return view('pages.product_detail');
+        return view('pages.product_detail', compact('product'));
     }
     public function wishlist()
     {

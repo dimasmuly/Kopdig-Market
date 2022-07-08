@@ -21,7 +21,7 @@ Route::get('/site-construction', [MaintenanceController::class, 'index']);
 /* for market platform */
 Route::get('/marketplace', [MarketController::class, 'index']);
 Route::get('/marketplace/shop', [MarketController::class, 'shop']);
-Route::get('/marketplace/shop/product-detail/{id}', [MarketController::class, 'detail_product']);
+Route::get('/marketplace/shop/product-detail/{product}', [MarketController::class, 'detail_product']);
 Route::get('/marketplace/wishlist', [MarketController::class, 'wishlist']);
 Route::get('/marketplace/keranjang', [MarketController::class, 'keranjang']);
 Route::get('/marketplace/bayar', [MarketController::class, 'bayar']);
