@@ -19,8 +19,18 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->integer('role_id')->unsigned()->default(3);
+            $table->integer('cooperative_id')->nullable();
+            $table->string('credit_card_number')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->string('gender')->default('L');
+            $table->text('address')->nullable();
             $table->rememberToken();
+            $table->foreignId('current_team_id')->nullable();
+            $table->string('profile_photo_path', 2048)->nullable();
+            $table->boolean('is_verified')->nullable();
             $table->timestamps();
+
         });
     }
 
