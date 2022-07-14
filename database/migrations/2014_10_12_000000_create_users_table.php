@@ -30,6 +30,7 @@ return new class extends Migration
             $table->string('profile_photo_path', 2048)->nullable();
             $table->boolean('is_verified')->nullable();
             $table->timestamps();
+
         });
     }
 
