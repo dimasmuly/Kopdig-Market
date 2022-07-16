@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MaintenanceController;
 use App\Http\Controllers\MarketController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
