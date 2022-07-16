@@ -1,40 +1,16 @@
-<!-- calling the main part --> 
+<!-- calling the main part -->
 @extends('main.master')
 
-<!-- Section for adding css -->    
+<!-- Section for adding css -->
 @section('css')
 
 @endsection
 
-<!-- Section for adding content page -->    
+<!-- Section for adding content page -->
 @section('isi')
 <main>
     <!-- page-banner-area-start -->
-    <div class="page-banner-area page-banner-height" data-background="assets/img/banner/page-banner-3.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="page-banner-content text-center">
-                        <h4 class="breadcrumb-title">My Account</h4>
-                        <div class="breadcrumb-two">
-                            <nav>
-                                <nav class="breadcrumb-trail breadcrumbs">
-                                    <ul class="breadcrumb-menu">
-                                        <li class="breadcrumb-trail">
-                                            <a href="{{ url ("/marketplace") }}"><span>Home</span></a>
-                                        </li>
-                                        <li class="trail-item">
-                                            <span>My Account</span>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- page-banner-area-end -->
 
     <br>
@@ -84,9 +60,9 @@
                             class="form-control" placeholder="enter education" value=""></div>
                 </div>
                 <div class="row mt-3">
-                    
+
                 </div>
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save
+                <div class="mt-5 text-left"><button class="btn btn-primary profile-button" type="button">Save
                         Profile</button></div>
             </div>
         </div>
@@ -119,7 +95,7 @@
 </main>
 @endsection
 
-<!-- Section for adding script js -->    
+<!-- Section for adding script js -->
 @section('script')
 
     @endsection

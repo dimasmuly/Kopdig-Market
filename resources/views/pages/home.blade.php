@@ -301,7 +301,7 @@
                 <div class="col-xl-6 col-lg-6 col-md-12">
                     <div class="banner__item p-relative w-img mb-30">
                         <div class="banner__img">
-                            <a href="/marketplace/shop/product-detail/{{$item->id}}"><img src="{{ asset('assets/img/banner/pc-keyboard.png') }}" alt=""></a>
+                            <a href="/marketplace/shop/product-detail/"><img src="{{ asset('assets/img/banner/pc-keyboard.png') }}" alt=""></a>
                         </div>
                         <div class="banner__content">
                             <span>Produk Terbaik</span>

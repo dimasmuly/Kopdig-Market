@@ -20,7 +20,11 @@
                                     <li><a href="about.html">Tentang Kami</a></li>
                                     <li><a href="{{ url("/marketplace/lacak_pesanan") }}">Lacak pesanan</a></li>
                                     <li><a href="contact.html">Hubungi kami</a></li>
-                                    <li><a href="faq.html">FAQs</a></li>
+                                    <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                                 </ul>
                             </div>
                         </div>
@@ -146,7 +150,7 @@
     <div class="header__bottom">
         <div class="container">
             <div class="row g-0 align-items-center">
-                <div class="col-lg-3">                        
+                <div class="col-lg-3">
                     <div class="cat__menu-wrapper side-border d-none d-lg-block">
                         <div class="cat-toggle">
                             <button type="button" class="cat-toggle-btn cat-toggle-btn-1"><i class="fal fa-bars"></i> Shop by department</button>
