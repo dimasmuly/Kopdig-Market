@@ -4,6 +4,7 @@ use App\Http\Controllers\LogoutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MaintenanceController;
 use App\Http\Controllers\MarketController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,13 @@ Route::get('/marketplace/keranjang', [MarketController::class, 'keranjang']);
 Route::get('/marketplace/bayar', [MarketController::class, 'bayar']);
 Route::get('/marketplace/lacak_pesanan', [MarketController::class, 'lacak_pesanan']);
 Route::get('/marketplace/profile', [MarketController::class, 'profile']);
+
+/* for add to cart */
+Route::get('/', [ProductController::class, 'index']);  
+Route::get('cart', [ProductController::class, 'cart'])->name('cart');
+Route::get('add-to-cart/{id}', [ProductController::class, 'addToCart'])->name('add.to.cart');
+Route::patch('update-cart', [ProductController::class, 'update'])->name('update.cart');
+Route::delete('remove-from-cart', [ProductController::class, 'remove'])->name('remove.from.cart');
 
 /* for logout */
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])

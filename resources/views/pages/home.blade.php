@@ -278,7 +278,7 @@
                                     </div>
                                     <div class="product__add-cart text-center">
                                         <button type="button" class="cart-btn product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
-                                        Masukkan Keranjang
+                                        <a href="{{ route('add.to.cart', $product->id) }}">Masukkan Keranjang</a>
                                         </button>
                                     </div>
                                 </div>

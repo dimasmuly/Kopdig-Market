@@ -39,20 +39,28 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
           
-        $cart = session()->get('cart', []);
+        $keranjang = session()->get('keranjang', []);
   
-        if(isset($cart[$id])) {
-            $cart[$id]['quantity']++;
+        if(isset($keranjang[$id])) {
+            $keranjang[$id]['quantity']++;
         } else {
-            $cart[$id] = [
+            $keranjang[$id] = [
+                "business_detail_id" => $product->business_detail_id,
+                "product_category_id" => $product->product_category_id, 
                 "name" => $product->name,
-                "quantity" => 1,
                 "price" => $product->price,
-                "thumbnail" => $product->thumbnail
+                "stock" => $product->stock,
+                "description" => $product->description,
+                "quantity" => 1,
+                "thumbnail" => $product->thumbnail,
+                "production_date" => $product->production_date,
+                "discount" => $product->discount,
+                "weight" => $product->weight,
+                "voucher_id" => $product->voucher_id
             ];
         }
           
-        session()->put('cart', $cart);
+        session()->put('keranjang', $keranjang);
         return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
   
@@ -64,9 +72,9 @@ class ProductController extends Controller
     public function update(Request $request)
     {
         if($request->id && $request->quantity){
-            $cart = session()->get('cart');
-            $cart[$request->id]["quantity"] = $request->quantity;
-            session()->put('cart', $cart);
+            $keranjang = session()->get('cart');
+            $keranjang[$request->id]["quantity"] = $request->quantity;
+            session()->put('keranjang', $keranjang);
             session()->flash('success', 'Cart updated successfully');
         }
     }
@@ -79,10 +87,10 @@ class ProductController extends Controller
     public function remove(Request $request)
     {
         if($request->id) {
-            $cart = session()->get('cart');
+            $keranjang = session()->get('cart');
             if(isset($cart[$request->id])) {
                 unset($cart[$request->id]);
-                session()->put('cart', $cart);
+                session()->put('keranjang', $keranjang);
             }
             session()->flash('success', 'Product removed successfully');
         }
